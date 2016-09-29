@@ -1,0 +1,93 @@
+# **Configuracións de xarxa**
+### 1) Configureu dos ordinadors fent servir la comanda ip amb dues adreces del rang 172.16.0.0 i comproveu que es veuen entre si.
+a) Per configurar-les
+- pc1: ip addr add 172.16.0.9/16 dev enp5s0
+- pc2: ip addr add 172.16.0.8/16 dev enp5s0
+
+b) Per comprovar que es veuen.
+- pc1: ping 172.16.0.8
+- pc2: ping 172.16.0.9
+
+### 2) Com podem descobrir l'adreça mac d'un altre dispositiu de la nostra xarxa (que no sigui el nostre)?
+
+- pc1:  ping 172.16.0.8
+- pc1: arp -i enp5s0 172.16.0.8 enp5s0 pub
+
+### 3) Com podem canviar el nom d'una interfície de xarxa amb la comanda ip? Poseu exemple.
+
+- pc1: ip link set enp5s0 down	
+- pc1: ip link set enp5s0 name INTERFAZ
+- pc1: ip link set INTERFAZ up
+- pc1: ip a s (aqui se observa el cambio del nombre)
+
+### 4) Busqueu el paquet RPM per a la utilitat netperf i instal.leu-lo (copieu netperf al directori cp netperf /usr/local/bin per tal que sigui accessible desde qualsevol lloc). Arrenqueu el servidor en una de les màquines i el client en l'altra tot comprovant la velocitat que obtenim entre els dos. Indiqueu quina es la velocitat obtinguda. Feu servir aquest script en el client per tal de comprovar TCP full-duplex:
+
+     for i in 1
+         do
+          netperf -H 10.1.2.33 -t TCP_STREAM -B "outbound" -i 10 -P 0 -v 0 \
+            -- -s 256K -S 256K &
+          netperf -H 10.1.2.33 -t TCP_MAERTS -B "inbound"  -i 10 -P 0 -v 0 \
+            -- -s 256K -S 256K &
+         done
+### 5) Canvieu ara la MTU de les interfícies de xarxa dels dos ordinadors a un valor de 9000 bytes. comproveu de nou quina és la velocitat obtinguda. 
+
+- interfaz pc1:  ip link set enp5s0 mtu 9000
+- interfaz pc2:  ip link set enp5s0 mtu 9000
+
+~ las interfaces intermedias(switches, routers...) han de permitir dicha mtu 
+
+### 6) Realitzeu ara la mateixa configuració estàtica d'adreces IP amb la comanda nmcli. Indiqueu-ne els passos.
+
+- pc1: nmcli con add con-name CON2 ifname enp3s0 type ethernet ip4 172.16.0.9 gw4 172.16.0.1
+- pc2: nmcli con add con-name CON2 ifname enp3s0 type ethernet ip4 172.16.0.8 gw4 172.16.0.1
+
+### 7) On es troba la configuració de servidors de noms de domini?
+
+- /etc/resolv.conf
+
+### 8) Realitzeu la mateixa configuració anterior de manera permanent (ifcfg-...). Quins són els paràmetres de la comanda nmcli per tal de forçar que s'apliquin els canvis de xarxa que hem fet als fitxers?
+
+- Para una configuracion estica o dinamica editamos el fichero: /etc/sysconfig/network-scripts/ifcfg-enp5s0 
+	
+	-Estatica
+		
+		DEVICE=enp5s0
+		BOOTPROTO=none
+		ONBOOT=yes
+		PREFIX=16
+		IPADDR=172.16.0.9
+
+	-Dinamica
+		
+		DEVICE=enp5s0
+		BOOTPROTO=dhcp
+		ONBOOT=yes
+
+### 9) Com podem canviar de manera permanent el nom de les interfícies de xarxa (que sobrevisquin a un reinici?) /etc/udev/rules.d/70-persistent-net.rules
+
+vim /etc/udev/rules.d/70-persistent-net.rules
+
+> SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="b8:ac:6f:65:31:e5", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="enp5s0"
+
+en el campo NAME cambiamos el valor
+
+NAME="New conection"
+
+> SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="b8:ac:6f:65:31:e5", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="My conection"
+
+comprobamos con un reboot
+
+### 10) Com podem traduïr un nom de domini per la seva/seves adreces IP? I com podem trobar el nom de domini a partir d'una adreça IP?
+
+Con la orden dig
+
+-dig google.com +short 
+    
+    216.58.201.142
+
+-dig -x 216.58.201.142 +short
+
+    mad06s25-in-f14.1e100.net.
+    mad06s25-in-f14.1e100.net.
+    mad06s25-in-f142.1e100.net.
+    mad06s25-in-f142.1e100.net.
