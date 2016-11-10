@@ -1,0 +1,20 @@
+$TTL 86400
+@	IN	SOA	ns1.vladimir.com. root.vladimir.com. (
+	2013042201	;Serial
+	3600	;Refresh
+	1800	;Retry
+	604800	;Expire
+	86400	;Minimum TTL
+)
+; Specify our two nameservers
+	IN	NS 	ns1.vladimir.com.
+	IN	NS	ns2.vladimir.com.
+
+; Resolve nameserver hostnames to IP
+ns1	IN	A	172.16.0.1
+ns2	IN	A	172.16.0.2
+
+;Define hostname
+@	IN	A	192.168.1.133
+www	IN	A	3.3.3.3
+
