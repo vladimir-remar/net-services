@@ -1,0 +1,28 @@
+
+; <<>> DiG 9.10.4-P3-RedHat-9.10.4-2.P3.fc24 <<>> www.vladimir.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49785
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 3
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.vladimir.com.		IN	A
+
+;; ANSWER SECTION:
+www.vladimir.com.	86400	IN	A	3.3.3.3
+
+;; AUTHORITY SECTION:
+vladimir.com.		86400	IN	NS	ns1.vladimir.com.
+vladimir.com.		86400	IN	NS	ns2.vladimir.com.
+
+;; ADDITIONAL SECTION:
+ns1.vladimir.com.	86400	IN	A	172.16.0.1
+ns2.vladimir.com.	86400	IN	A	172.16.0.2
+
+;; Query time: 0 msec
+;; SERVER: 172.16.0.2#53(172.16.0.2)
+;; WHEN: jue nov 10 21:27:19 CET 2016
+;; MSG SIZE  rcvd: 129
+
