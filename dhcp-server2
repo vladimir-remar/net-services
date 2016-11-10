@@ -1,0 +1,23 @@
+#
+# DHCP Server Configuration file.
+#   see /usr/share/doc/dhcp-server/dhcpd.conf.example
+#   see dhcpd.conf(5) man page
+#
+failover peer "failover-partner" {
+	secondary;
+	address 172.16.0.2;
+	port 520;
+	peer address 172.16.0.1;
+	peer port 519;
+	max-response-delay 60;
+	max-unacked-updates 19;
+	load balance max seconds 2;
+}
+subnet 172.16.0.0 netmask 255.255.0.0 {
+	option domain-name-servers 172.16.0.2,172.16.0.1;
+	option routers 172.16.0.2;
+	pool {
+		failover peer "failover-partner";
+		range 172.16.0.10 172.16.0.20;
+	}
+}
