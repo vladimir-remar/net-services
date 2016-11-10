@@ -1,0 +1,4 @@
+21:48:07.306564 IP (tos 0x0, ttl 64, id 5991, offset 0, flags [none], proto UDP (17), length 77)
+    172.16.0.18.51048 > 172.16.0.2.domain: [bad udp cksum 0x587f -> 0xb39a!] 59824+ [1au] PTR? 8.8.8.8.in-addr.arpa. ar: . OPT UDPsize=4096 (49)
+21:48:07.306889 IP (tos 0x0, ttl 64, id 32096, offset 0, flags [none], proto UDP (17), length 257)
+    172.16.0.2.domain > 172.16.0.18.51048: [bad udp cksum 0x5933 -> 0x3010!] 59824 q: PTR? 8.8.8.8.in-addr.arpa. 1/4/5 8.8.8.8.in-addr.arpa. [23h55m22s] PTR google-public-dns-a.google.com. ns: 8.8.8.in-addr.arpa. [55m20s] NS ns4.google.com., 8.8.8.in-addr.arpa. [55m20s] NS ns3.google.com., 8.8.8.in-addr.arpa. [55m20s] NS ns1.google.com., 8.8.8.in-addr.arpa. [55m20s] NS ns2.google.com. ar: ns2.google.com. [1d23h55m20s] A 216.239.34.10, ns4.google.com. [1d23h55m20s] A 216.239.38.10, ns1.google.com. [1d23h55m20s] A 216.239.32.10, ns3.google.com. [1d23h55m20s] A 216.239.36.10, . OPT UDPsize=4096 (229)
