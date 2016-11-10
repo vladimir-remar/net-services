@@ -1,0 +1,4 @@
+21:17:14.675572 IP (tos 0x0, ttl 64, id 52453, offset 0, flags [none], proto UDP (17), length 73)
+    172.16.0.18.44566 > 172.16.0.1.domain: [bad udp cksum 0x587a -> 0x6e45!] 23679+ [1au] A? www.vladimir.com. ar: . OPT UDPsize=4096 (45)
+21:17:14.675768 IP (tos 0x0, ttl 64, id 56851, offset 0, flags [none], proto UDP (17), length 157)
+    172.16.0.1.domain > 172.16.0.18.44566: [bad udp cksum 0x58ce -> 0xc543!] 23679* q: A? www.vladimir.com. 1/2/3 www.vladimir.com. [1d] A 3.3.3.3 ns: vladimir.com. [1d] NS ns1.vladimir.com., vladimir.com. [1d] NS ns2.vladimir.com. ar: ns1.vladimir.com. [1d] A 172.16.0.1, ns2.vladimir.com. [1d] A 172.16.0.2, . OPT UDPsize=4096 (129)
