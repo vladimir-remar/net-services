@@ -1,0 +1,45 @@
+#!/bin/bash
+
+####===============================================####
+##
+## Tallafocs
+## 
+## 
+####===============================================####
+
+## FLUSH de regles
+iptables -F
+iptables -X
+iptables -Z
+iptables -t nat -F
+
+## Establim política per defecte
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -t nat -P PREROUTING ACCEPT
+iptables -t nat -P POSTROUTING ACCEPT
+
+# Cal que estigui activat per tal de fer de router (Forward packets)
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# obrir el loopback
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+
+# Permetem tot el que entri a la nostra ip
+iptables -A INPUT -s 172.16.10.1 -j ACCEPT
+iptables -A OUTPUT -d 172.16.10.1 -j ACCEPT
+
+iptables -A INPUT -s 172.16.11.1 -j ACCEPT
+iptables -A OUTPUT -d 172.16.11.1 -j ACCEPT
+
+# Permetem tot el tràfic com a router entre les dues xarxes
+iptables -A FORWARD -s 172.16.10.0/24 -j ACCEPT
+iptables -A FORWARD -s 172.16.11.0/24 -j ACCEPT
+iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+IPTABLES -A FORWARD -j DROP
+
+# Això serà necessari per tal de fer NAT per a tots els paquets que surtin
+# per aquesta interfície.
+iptables -t nat -A POSTROUTING -s 172.16.10.0/24 -o eth1 -j MASQUERADE
