@@ -1,0 +1,14 @@
+$TTL 86400
+@	IN	SOA	ns1.vladimir.com. root.vladimir.com. (
+	2013042202	;Serial
+	3600	;Refresh
+	1800	;Retry
+	604800	;Expire
+	86400	;Minimum TTL
+)
+; Specify our two nameservers
+	IN	NS	ns1.vladimir.com.
+
+$ORIGIN 2.168.192.in-addr.arpa.
+; Define hostip
+39	IN	PTR	www.vladimir.com.
