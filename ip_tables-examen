@@ -28,8 +28,8 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
 # Permetem tot el que entri a la nostra ip
-iptables -A INPUT -s 192.168.200.1 -j ACCEPT
-iptables -A OUTPUT -d 192.168.200.1 -j ACCEPT
+iptables -A INPUT -s 192.168.200.254 -j ACCEPT
+iptables -A OUTPUT -d 192.168.200.254 -j ACCEPT
 
 
 # Permetem tot el tràfic com a router entre les dues xarxes
