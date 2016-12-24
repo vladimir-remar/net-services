@@ -1,0 +1,77 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:/C=GB/ST=Berkshire/L=Newbury/O=My Company Ltd/CN=https://moodle.vladimir.com
+   i:/C=GB/ST=Berkshire/L=Newbury/O=My Company Ltd/CN=https://moodle.vladimir.com
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICXDCCAcWgAwIBAgIFAKiH/80wDQYJKoZIhvcNAQELBQAwcjELMAkGA1UEBhMC
+R0IxEjAQBgNVBAgTCUJlcmtzaGlyZTEQMA4GA1UEBxMHTmV3YnVyeTEXMBUGA1UE
+ChMOTXkgQ29tcGFueSBMdGQxJDAiBgNVBAMTG2h0dHBzOi8vbW9vZGxlLnZsYWRp
+bWlyLmNvbTAeFw0xNjEyMjIxNDIyMDVaFw0xNzAxMjIxNDIyMDVaMHIxCzAJBgNV
+BAYTAkdCMRIwEAYDVQQIEwlCZXJrc2hpcmUxEDAOBgNVBAcTB05ld2J1cnkxFzAV
+BgNVBAoTDk15IENvbXBhbnkgTHRkMSQwIgYDVQQDExtodHRwczovL21vb2RsZS52
+bGFkaW1pci5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANy7NcgFiLH2
+Jq9r713+yPo+H0RvTYlXQSqQfh6Q5+UqXv++TM7UoWAlt67hs8/ydfmHyrECXqa5
+p/1AYA/vAW+Muwd2XiNxTJzF8VjZGJ9Nr4zBhoOLdKrz413GH4AOT9l6POQRLQjL
+fIZT/ymjwYNc3KUY2XYsgaoxL1AajgcXAgMBAAEwDQYJKoZIhvcNAQELBQADgYEA
+fSiWjqL70F8iWVwpiEtw2twZKbNtycXItDZktHentSY+A1PVWiLVQmAOtI+W9H5g
+lD0Hr0ZezcJNqKZdDSN8PQd+WUlU5Ik5Eac5HAlMweqUTLzV7tR6VdNAW5ocl4QU
+hiSNIcqk+dhRnoX8azvJotLdYmsdGWYKPuHZw/ifLXY=
+-----END CERTIFICATE-----
+subject=/C=GB/ST=Berkshire/L=Newbury/O=My Company Ltd/CN=https://moodle.vladimir.com
+issuer=/C=GB/ST=Berkshire/L=Newbury/O=My Company Ltd/CN=https://moodle.vladimir.com
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: ECDH, P-256, 256 bits
+---
+SSL handshake has read 1171 bytes and written 327 bytes
+---
+New, TLSv1/SSLv3, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 47CF44C3D817D18C8DE4D0DE924FC377E34987CE58C0C0CB447E0646144939DB
+    Session-ID-ctx: 
+    Master-Key: B047613660C79C9A3601C786B110C5C248C485E9DC85CFBAFB7F132364E864E486BD5BEED1601BE68ABEED9A217D5902
+    Key-Arg   : None
+    Krb5 Principal: None
+    PSK identity: None
+    PSK identity hint: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - a9 31 e1 0b 4f 04 70 23-c2 f6 30 92 15 ef a3 c0   .1..O.p#..0.....
+    0010 - 22 9d f1 a8 3b 4c 82 3c-6f 19 10 71 2b 57 c4 d6   "...;L.<o..q+W..
+    0020 - 25 f5 40 7b 15 84 52 31-1f 90 8a a6 cf f8 3d b0   %.@{..R1......=.
+    0030 - 0c 45 39 a8 d9 b6 9e 7a-f0 8d c2 16 76 85 36 d0   .E9....z....v.6.
+    0040 - c1 a4 43 7f 1c 5f 93 c1-05 f9 53 84 89 7b 0b 21   ..C.._....S..{.!
+    0050 - bc 11 6c e8 7d 61 35 e1-97 8b 7c 89 70 09 97 c0   ..l.}a5...|.p...
+    0060 - c8 d9 41 9d f9 56 28 7a-00 a4 85 62 ae 71 3d 05   ..A..V(z...b.q=.
+    0070 - 2b e7 9f a4 7a 68 b3 7c-91 ee c9 c9 9b c7 d6 00   +...zh.|........
+    0080 - 45 bd 02 25 8e fe ed 07-19 67 c5 60 43 a4 ab 4b   E..%.....g.`C..K
+    0090 - 76 2b 67 d0 80 34 3c b9-20 c7 aa dd 7e 79 92 44   v+g..4<. ...~y.D
+    00a0 - fb 47 f7 e8 0a f2 e8 af-dd ef c6 f6 06 e4 b3 f4   .G..............
+    00b0 - 72 52 69 d0 53 8e 9a 47-c1 5a 3a da cb b4 99 ec   rRi.S..G.Z:.....
+
+    Start Time: 1482583892
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+---
+HTTP/1.1 200 OK
+Date: Sat, 24 Dec 2016 12:51:33 GMT
+Server: Apache/2.4.23 (Fedora) OpenSSL/1.0.2j-fips PHP/7.0.14
+Last-Modified: Thu, 22 Dec 2016 13:56:07 GMT
+ETag: "381-5443fa18a5899"
+Accept-Ranges: bytes
+Content-Length: 897
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+closed
