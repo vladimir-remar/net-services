@@ -1,0 +1,21 @@
+HTTP/1.0 303 See Other
+Date: Sun, 25 Dec 2016 12:05:00 GMT
+Server: Apache/2.4.25 (Fedora) OpenSSL/1.0.2j-fips PHP/7.0.14
+X-Powered-By: PHP/7.0.14
+Set-Cookie: MoodleSession=8m7boqleb8kg9lqhn2kmrs87b6; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Location: http://moodle.vladimir.com/login/index.php
+Content-Language: en
+Content-Length: 440
+Connection: close
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html  lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Redirect</title>
+</head><body><div style="margin-top: 3em; margin-left:auto; margin-right:auto; text-align:center;">This page should automatically redirect. If nothing is happening please use the continue link below.<br /><a href="http://moodle.vladimir.com/login/index.php">Continue</a></div></body></html>Connection closed by foreign host.
