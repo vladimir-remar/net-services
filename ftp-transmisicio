@@ -1,0 +1,64 @@
+09:40:49.094327 IP (tos 0x0, ttl 64, id 62011, offset 0, flags [DF], proto TCP (6), length 60)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [S], cksum 0xde43 (correct), seq 3607069977, win 29200, options [mss 1460,sackOK,TS val 2127650 ecr 0,nop,wscale 7], length 0
+09:40:49.107961 IP (tos 0x0, ttl 55, id 47819, offset 0, flags [DF], proto TCP (6), length 64)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [S.], cksum 0xe896 (correct), seq 1407641325, ack 3607069978, win 49980, options [nop,nop,TS val 298796513 ecr 2127650,mss 1440,nop,wscale 0,nop,nop,sackOK], length 0
+09:40:49.108028 IP (tos 0x0, ttl 64, id 62012, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xeb98 (correct), seq 1, ack 1, win 229, options [nop,nop,TS val 2127663 ecr 298796513], length 0
+09:40:49.131515 IP (tos 0x0, ttl 55, id 47820, offset 0, flags [DF], proto TCP (6), length 188)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0x2a14 (correct), seq 1:137, ack 1, win 49980, options [nop,nop,TS val 298796515 ecr 2127663], length 136: FTP, length: 136
+09:40:49.131629 IP (tos 0x10, ttl 64, id 62013, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xeaee (correct), seq 1, ack 137, win 237, options [nop,nop,TS val 2127687 ecr 298796515], length 0
+09:40:50.052503 IP (tos 0x10, ttl 64, id 62014, offset 0, flags [DF], proto TCP (6), length 64)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [P.], cksum 0x4578 (correct), seq 1:13, ack 137, win 237, options [nop,nop,TS val 2128608 ecr 298796515], length 12: FTP, length: 12
+	USER test2
+09:40:50.066290 IP (tos 0x0, ttl 55, id 47821, offset 0, flags [DF], proto TCP (6), length 52)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [.], cksum 0x249c (correct), seq 137, ack 13, win 49980, options [nop,nop,TS val 298796609 ecr 2128608], length 0
+09:40:50.068923 IP (tos 0x0, ttl 55, id 47822, offset 0, flags [DF], proto TCP (6), length 294)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0xc71b (correct), seq 137:379, ack 13, win 49980, options [nop,nop,TS val 298796609 ecr 2128608], length 242: FTP, length: 242
+09:40:50.069035 IP (tos 0x10, ttl 64, id 62015, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xe5e1 (correct), seq 13, ack 379, win 245, options [nop,nop,TS val 2128624 ecr 298796609], length 0
+09:40:51.364726 IP (tos 0x10, ttl 64, id 62016, offset 0, flags [DF], proto TCP (6), length 59)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [P.], cksum 0x1321 (correct), seq 13:20, ack 379, win 245, options [nop,nop,TS val 2129920 ecr 298796609], length 7: FTP, length: 7
+	PASS 
+09:40:51.377950 IP (tos 0x0, ttl 55, id 47823, offset 0, flags [DF], proto TCP (6), length 52)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [.], cksum 0x1e00 (correct), seq 379, ack 20, win 49980, options [nop,nop,TS val 298796740 ecr 2129920], length 0
+09:40:51.377992 IP (tos 0x0, ttl 55, id 47824, offset 0, flags [DF], proto TCP (6), length 80)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0x4668 (correct), seq 379:407, ack 20, win 49980, options [nop,nop,TS val 298796740 ecr 2129920], length 28: FTP, length: 28
+	230 Any password will work
+09:40:51.378075 IP (tos 0x10, ttl 64, id 62017, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xe01e (correct), seq 20, ack 407, win 245, options [nop,nop,TS val 2129933 ecr 298796740], length 0
+09:40:51.378139 IP (tos 0x10, ttl 64, id 62018, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [P.], cksum 0x2c59 (correct), seq 20:26, ack 407, win 245, options [nop,nop,TS val 2129933 ecr 298796740], length 6: FTP, length: 6
+	SYST
+09:40:51.391626 IP (tos 0x0, ttl 55, id 47825, offset 0, flags [DF], proto TCP (6), length 71)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0xb664 (correct), seq 407:426, ack 26, win 49980, options [nop,nop,TS val 298796741 ecr 2129933], length 19: FTP, length: 19
+	215 UNIX Type: L8
+09:40:51.431307 IP (tos 0x10, ttl 64, id 62019, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xdfce (correct), seq 26, ack 426, win 245, options [nop,nop,TS val 2129987 ecr 298796741], length 0
+09:40:52.372915 IP (tos 0x10, ttl 64, id 62020, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [P.], cksum 0x2b72 (correct), seq 26:32, ack 426, win 245, options [nop,nop,TS val 2130928 ecr 298796741], length 6: FTP, length: 6
+	PASV
+09:40:52.386076 IP (tos 0x0, ttl 55, id 47826, offset 0, flags [DF], proto TCP (6), length 101)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0xb6cd (correct), seq 426:475, ack 32, win 49980, options [nop,nop,TS val 298796841 ecr 2130928], length 49: FTP, length: 49
+	227 Entering Passive Mode (130,206,1,5,117,117)
+09:40:52.386196 IP (tos 0x10, ttl 64, id 62021, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xdb79 (correct), seq 32, ack 475, win 245, options [nop,nop,TS val 2130941 ecr 298796841], length 0
+09:40:52.404175 IP (tos 0x10, ttl 64, id 62022, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [P.], cksum 0x2eb2 (correct), seq 32:38, ack 475, win 245, options [nop,nop,TS val 2130959 ecr 298796841], length 6: FTP, length: 6
+	LIST
+09:40:52.417448 IP (tos 0x0, ttl 55, id 47828, offset 0, flags [DF], proto TCP (6), length 82)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0x31de (correct), seq 475:505, ack 38, win 49980, options [nop,nop,TS val 298796844 ecr 2130959], length 30: FTP, length: 30
+	150 Accepted data connection
+09:40:52.417704 IP (tos 0x0, ttl 55, id 47831, offset 0, flags [DF], proto TCP (6), length 95)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0x903a (correct), seq 505:548, ack 38, win 49980, options [nop,nop,TS val 298796844 ecr 2130959], length 43: FTP, length: 43
+	226-Options: -a -l 
+	226 12 matches total
+09:40:52.417776 IP (tos 0x10, ttl 64, id 62023, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [.], cksum 0xdb07 (correct), seq 38, ack 548, win 245, options [nop,nop,TS val 2130973 ecr 298796844], length 0
+09:40:56.724849 IP (tos 0x10, ttl 64, id 62024, offset 0, flags [DF], proto TCP (6), length 58)
+    192.168.2.39.56728 > 130.206.1.5.ftp: Flags [P.], cksum 0x2273 (correct), seq 38:44, ack 548, win 245, options [nop,nop,TS val 2135280 ecr 298796844], length 6: FTP, length: 6
+	QUIT
+09:40:56.738953 IP (tos 0x0, ttl 55, id 47833, offset 0, flags [DF], proto TCP (6), length 119)
+    130.206.1.5.ftp > 192.168.2.39.56728: Flags [P.], cksum 0x6a4f (correct), seq 548:615, ack 44, win 49980, options [nop,nop,TS val 298797276 ecr 2135280], length 67: FTP, length: 67
+	221-Goodbye. You uploaded 0 and downloaded 0 kbytes.
+	221 Logout.
