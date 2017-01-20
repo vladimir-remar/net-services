@@ -1,0 +1,7 @@
+<VirtualHost moodle.vladimir.com:443>
+	DocumentRoot "/var/www/html/moodle"
+	ServerName https://moodle.vladimir.com
+	SSLEngine on
+	SSLCertificateFile /etc/pki/tls/certs/moodle.vladimir.com.crt
+	SSLCertificateKeyFile /etc/pki/tls/private/moodle.vladimir.com.key
+</VirtualHost>
