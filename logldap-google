@@ -1,0 +1,17 @@
+<Directory /var/www/html/moodle>
+	AuthType Basic
+	AuthBasicProvider ldap
+	AuthLDAPBindAuthoritative off
+	AuthName "Cal el vostre usuari i clau per accedir:"
+	AuthLDAPURL ldap://192.168.2.39:389/ou=usuaris,dc=edt,dc=org?cn
+	require valid-user
+</Directory>
+listen 443
+
+<VirtualHost moodle.vladimir.com:443>
+	DocumentRoot "/var/www/html/moodle"
+	ServerName https://moodle.vladimir.com
+	SSLEngine on
+	SSLCertificateFile /etc/pki/tls/certs/moodle.vladimir.com.crt
+	SSLCertificateKeyFile /etc/pki/tls/private/moodle.vladimir.com.key
+</VirtualHost>
