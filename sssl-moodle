@@ -1,3 +1,4 @@
+listen 443
 <VirtualHost moodle.vladimir.com:443>
 	DocumentRoot "/var/www/html/moodle"
 	ServerName https://moodle.vladimir.com
